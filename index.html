@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premises Checklist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+    <body>
+    <div class="form-wrapper">
+        <!-- Decorative Left & Right Images -->
+        <img src="https://picsum.photos/80/80?blur=5" class="decor-left" alt="Decoration">
+        <img src="https://picsum.photos/80/80?blur=5" class="decor-right" alt="Decoration">
+
+        <!-- Header Banner -->
+        <div class="header">
+            <img src="https://picsum.photos/800/150?grayscale" alt="Premises Banner" class="header-img">
+            <h2>Premises Checklist</h2>
+        </div>
+    <form id="checklist-form">
+
+    <!-- Frequency selection -->
+    <div id="frequencyOptions">
+    <label>Frequency:</label><br>
+    <input type="radio" name="Frequency" value="Daily" id="daily"> Daily<br>
+    <input type="radio" name="Frequency" value="Weekly" id="weekly"> Weekly - on Fridays<br>
+    <input type="radio" name="Frequency" value="Monthly" id="monthly"> Monthly - End of the month<br>
+    </div>
+
+ <!-- Daily time selection -->
+<div id="dailyTime" class="question-set">
+    <label>Time of Day:</label><br>
+    <input type="radio" name="Time of Day" value="Morning" id="morning"> Morning<br>
+    <input type="radio" name="Time of Day" value="Afternoon" id="afternoon"> Afternoon<br>
+</div>
+
+<!-- Daily Morning Questions -->
+<div id="morningQuestions" class="question-set">
+    <div class="question-item">
+        <span>Open school at 6:00am and unlock external doors/windows</span><br>
+        <label><input type="radio" name="Open school at 6:00am and unlock external doors/windows" value="Yes"> Yes</label>
+        <label><input type="radio" name="Open school at 6:00am and unlock external doors/windows" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Milk/fruit brought in and distributed</span><br>
+        <label><input type="radio" name="Milk/fruit brought in and distributed" value="Yes"> Yes</label>
+        <label><input type="radio" name="Milk/fruit brought in and distributed" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Stock toilets, classrooms, admin, with tissue/soap including air freshener</span><br>
+        <label><input type="radio" name="Stock toilets, classrooms, admin, with tissue/soap including air freshener" value="Yes"> Yes</label>
+        <label><input type="radio" name="Stock toilets, classrooms, admin, with tissue/soap including air freshener" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check building and grounds for cleanliness/hazards</span><br>
+        <label><input type="radio" name="Check building and grounds for cleanliness/hazards" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check building and grounds for cleanliness/hazards" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check playground equipment for damage/vandalism</span><br>
+        <label><input type="radio" name="Check playground equipment for damage/vandalism" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check playground equipment for damage/vandalism" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Fire doors are unlocked and clear</span><br>
+        <label><input type="radio" name="Fire doors are unlocked and clear" value="Yes"> Yes</label>
+        <label><input type="radio" name="Fire doors are unlocked and clear" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Front of school cleaned and cleared of rubbish/weeds before 8:30am</span><br>
+        <label><input type="radio" name="Front of school cleaned and cleared of rubbish/weeds before 8:30am" value="Yes"> Yes</label>
+        <label><input type="radio" name="Front of school cleaned and cleared of rubbish/weeds before 8:30am" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Gate duty 8:40-8:50am</span><br>
+        <label><input type="radio" name="Gate duty 8:40-8:50am" value="Yes"> Yes</label>
+        <label><input type="radio" name="Gate duty 8:40-8:50am" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>All external gates locked</span><br>
+        <label><input type="radio" name="All external gates locked" value="Yes"> Yes</label>
+        <label><input type="radio" name="All external gates locked" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Lock premises cupboard</span><br>
+        <label><input type="radio" name="Lock premises cupboard" value="Yes"> Yes</label>
+        <label><input type="radio" name="Lock premises cupboard" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check deliveries and move to correct location</span><br>
+        <label><input type="radio" name="Check deliveries and move to correct location" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check deliveries and move to correct location" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check Forest School for hazards/dead animals</span><br>
+        <label><input type="radio" name="Check Forest School for hazards/dead animals" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check Forest School for hazards/dead animals" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check Premises Jobs List</span><br>
+        <label><input type="radio" name="Check Premises Jobs List" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check Premises Jobs List" value="No"> No</label>
+    </div>
+</div>
+
+<!-- Daily Afternoon Questions -->
+<div id="afternoonQuestions" class="question-set">
+    <div class="question-item">
+        <span>Empty external bins, check playground for litter</span><br>
+        <label><input type="radio" name="Empty external bins, check playground for litter" value="Yes"> Yes</label>
+        <label><input type="radio" name="Empty external bins, check playground for litter" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Non-essentials electricals turned off (heaters & fans etc)</span><br>
+        <label><input type="radio" name="Non-essentials electricals turned off (heaters & fans etc)" value="Yes"> Yes</label>
+        <label><input type="radio" name="Non-essentials electricals turned off (heaters & fans etc)" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Cleaners have completed all tasks before leaving</span><br>
+        <label><input type="radio" name="Cleaners have completed all tasks before leaving" value="Yes"> Yes</label>
+        <label><input type="radio" name="Cleaners have completed all tasks before leaving" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Lock/secure external doors/windows</span><br>
+        <label><input type="radio" name="Lock/secure external doors/windows" value="Yes"> Yes</label>
+        <label><input type="radio" name="Lock/secure external doors/windows" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Cleaning cupboard is locked and cleaning products are secure</span><br>
+        <label><input type="radio" name="Cleaning cupboard is locked and cleaning products are secure" value="Yes"> Yes</label>
+        <label><input type="radio" name="Cleaning cupboard is locked and cleaning products are secure" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Premises office has been cleaned and desk wiped down</span><br>
+        <label><input type="radio" name="Premises office has been cleaned and desk wiped down" value="Yes"> Yes</label>
+        <label><input type="radio" name="Premises office has been cleaned and desk wiped down" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri</span><br>
+        <label><input type="radio" name="Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri" value="Yes"> Yes</label>
+        <label><input type="radio" name="Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Jobs list checked and actioned</span><br>
+        <label><input type="radio" name="Jobs list checked and actioned" value="Yes"> Yes</label>
+        <label><input type="radio" name="Jobs list checked and actioned" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check emails and respond/action</span><br>
+        <label><input type="radio" name="Check emails and respond/action" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check emails and respond/action" value="No"> No</label>
+    </div>
+</div>
+
+<!-- Weekly Questions -->
+<div id="weeklyQuestions" class="question-set">
+    <div class="question-item">
+        <span>Fire alarm test - separate form</span><br>
+        <label><input type="radio" name="Fire alarm test - separate form" value="Yes"> Yes</label>
+        <label><input type="radio" name="Fire alarm test - separate form" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>External bins emptied/changed (including carpark), twice during summer</span><br>
+        <label><input type="radio" name="External bins emptied/changed (including carpark), twice during summer" value="Yes"> Yes</label>
+        <label><input type="radio" name="External bins emptied/changed (including carpark), twice during summer" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Bins collected by Tuesday PM</span><br>
+        <label><input type="radio" name="Bins collected by Tuesday PM" value="Yes"> Yes</label>
+        <label><input type="radio" name="Bins collected by Tuesday PM" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check internal & external lights</span><br>
+        <label><input type="radio" name="Check internal & external lights" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check internal & external lights" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check fire equipment for damage</span><br>
+        <label><input type="radio" name="Check fire equipment for damage" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check fire equipment for damage" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check sanitary bins are in good order</span><br>
+        <label><input type="radio" name="Check sanitary bins are in good order" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check sanitary bins are in good order" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check childrens toilet locks are working</span><br>
+        <label><input type="radio" name="Check childrens toilet locks are working" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check childrens toilet locks are working" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>External escape staircases and gangways</span><br>
+        <label><input type="radio" name="External escape staircases and gangways" value="Yes"> Yes</label>
+        <label><input type="radio" name="External escape staircases and gangways" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Run water taps</span><br>
+        <label><input type="radio" name="Run water taps" value="Yes"> Yes</label>
+        <label><input type="radio" name="Run water taps" value="No"> No</label>
+    </div>
+</div>
+
+<!-- Monthly Questions -->
+<div id="monthlyQuestions" class="question-set">
+    <div class="question-item">
+        <span>Internal door checks - separate form</span><br>
+        <label><input type="radio" name="Internal door checks - separate form" value="Yes"> Yes</label>
+        <label><input type="radio" name="Internal door checks - separate form" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Emergency lights test - separate form</span><br>
+        <label><input type="radio" name="Emergency lights test - separate form" value="Yes"> Yes</label>
+        <label><input type="radio" name="Emergency lights test - separate form" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>External bins cleaned</span><br>
+        <label><input type="radio" name="External bins cleaned" value="Yes"> Yes</label>
+        <label><input type="radio" name="External bins cleaned" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Consumables received from S&D and signed for and DATED</span><br>
+        <label><input type="radio" name="Consumables received from S&D and signed for and DATED" value="Yes"> Yes</label>
+        <label><input type="radio" name="Consumables received from S&D and signed for and DATED" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Stock check and order where necessary</span><br>
+        <label><input type="radio" name="Stock check and order where necessary" value="Yes"> Yes</label>
+        <label><input type="radio" name="Stock check and order where necessary" value="No"> No</label>
+    </div>
+    <div class="question-item">
+        <span>Check all toilet air fresheners and batteries</span><br>
+        <label><input type="radio" name="Check all toilet air fresheners and batteries" value="Yes"> Yes</label>
+        <label><input type="radio" name="Check all toilet air fresheners and batteries" value="No"> No</label>
+    </div>
+</div>
+
+
+        <input type="submit" value="Submit Checklist">
+    </form>
+
+<script>
+const dailyRadio = document.getElementById('daily');
+const weeklyRadio = document.getElementById('weekly');
+const monthlyRadio = document.getElementById('monthly');
+
+const dailyTime = document.getElementById('dailyTime');
+const morningRadio = document.getElementById('morning');
+const afternoonRadio = document.getElementById('afternoon');
+
+const morningSet = document.getElementById('morningQuestions');
+const afternoonSet = document.getElementById('afternoonQuestions');
+const weeklySet = document.getElementById('weeklyQuestions');
+const monthlySet = document.getElementById('monthlyQuestions');
+
+function updateDisplay() {
+    // Hide all question sets initially
+    dailyTime.style.display = 'none';
+    morningSet.style.display = 'none';
+    afternoonSet.style.display = 'none';
+    weeklySet.style.display = 'none';
+    monthlySet.style.display = 'none';
+
+    // Show questions only for the selected frequency
+    if(dailyRadio.checked){
+        dailyTime.style.display = 'block';
+        if(morningRadio.checked) morningSet.style.display = 'block';
+        else if(afternoonRadio.checked) afternoonSet.style.display = 'block';
+    } else if(weeklyRadio.checked){
+        weeklySet.style.display = 'block';
+    } else if(monthlyRadio.checked){
+        monthlySet.style.display = 'block';
+    }
+}
+
+// Event listeners for all radios
+[dailyRadio, weeklyRadio, monthlyRadio, morningRadio, afternoonRadio].forEach(radio => {
+    radio.addEventListener('change', updateDisplay);
+});
+
+// Initialize on page load
+updateDisplay();
+
+// ===== FORM SUBMISSION TO GOOGLE APPS SCRIPT =====
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwD4QRvrg0RKeSoGvjD1vKK1V0NB15I6xPP51-WoW0-DosiWpn4Zx-ZN8QhYVXaw1e2Ow/exec'; // Replace with your actual deployment URL
+const form = document.getElementById('checklist-form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+    
+    for (let [key, value] of formData.entries()) {
+      params.append(key, value);
+    }
+
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: params
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Response:', data);
+        if(data.result === 'success') {
+          Swal.fire({
+            title: 'Success',
+            text: 'Submitted Successfully!',
+            icon: 'success'
+          });
+          form.reset();
+          updateDisplay();
+        } else {
+          Swal.fire({
+            title: 'Error',
+            text: data.error || 'Something went wrong',
+            icon: 'error'
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        Swal.fire({
+          title: 'Error',
+          text: 'Network error. Check console for details.',
+          icon: 'error'
+        });
+      });
+  });
+</script>
+
+</body>
+</html>
