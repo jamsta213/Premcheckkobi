@@ -1,0 +1,161 @@
+/* Page & Form Wrapper */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Decorative Images */
+.decor-left, .decor-right {
+    position: absolute;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.2;
+}
+
+.decor-left {
+    left: -90px;
+}
+
+.decor-right {
+    right: -90px;
+}
+
+/* Header Banner */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+/* Centered Title */
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Form */
+form {
+    background: linear-gradient(145deg, #f0f8ff, #e6f0ff);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Question Items */
+.question-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.question-item:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.radios {
+    display: flex;
+    gap: 10px;
+}
+
+span {
+    flex: 1;
+    margin-right: 15px;
+}
+
+/* Default radio size (desktop) */
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+}
+
+/* Section coloring */
+#dailyTime, #morningQuestions, #afternoonQuestions {
+    border: 1px solid #a3c4ff;
+    background-color: #e6f0ff;
+}
+
+#weeklyQuestions {
+    border: 1px solid #a3e6a3;
+    background-color: #e6ffe6;
+}
+
+#monthlyQuestions {
+    border: 1px solid #ffcc99;
+    background-color: #fff2e6;
+}
+
+/* Hover effect for all sections */
+.daily .question-item:hover,
+.weekly .question-item:hover,
+.monthly .question-item:hover {
+    background-color: #cce7f0;  /* slightly darker highlight */
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    input[type="radio"] {
+        width: 24px;
+        height: 24px;
+    }
+
+    .question-item {
+        flex-direction: column;      /* stack question and radios */
+        align-items: flex-start;     /* left-align everything */
+        padding: 15px;
+        margin: 15px 0;              /* slightly more spacing for touch */
+    }
+
+    .radios {
+        margin-top: 8px;             /* space above radio buttons */
+        gap: 20px;                   /* bigger gap for touch */
+    }
+
+    span {
+        margin-right: 0;             /* remove horizontal spacing */
+        font-size: 1.1em;            /* slightly bigger text */
+    }
+
+    form {
+        padding: 20px;               /* a bit more padding on mobile */
+    }
+
+    .form-wrapper {
+        width: 95%;                  /* nearly full width on mobile */
+    }
+
+    .header-img {
+        max-width: 100%;             /* scale banner for small screens */
+    }
+
+    .decor-left, .decor-right {
+        width: 50px;
+        height: 50px;
+    }
+}
