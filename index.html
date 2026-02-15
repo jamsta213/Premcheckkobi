@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Premises Checklist</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="claudestyle.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -23,6 +23,7 @@
                 <input type="radio" name="Frequency" value="Daily" id="daily"> Daily<br>
                 <input type="radio" name="Frequency" value="Weekly" id="weekly"> Weekly - on Fridays<br>
                 <input type="radio" name="Frequency" value="Monthly" id="monthly"> Monthly - End of the month<br>
+                <input type="radio" name="Frequency" value="Additional" id="additional"> Additional Checks<br>
             </div>
 
             <!-- Daily time selection -->
@@ -233,6 +234,73 @@
                 </div>
             </div>
 
+<!-- Additional Checks Questions -->
+<div id="additionalQuestions" class="question-set">
+    <!-- Lift Maintenance -->
+    <div class="question-item">
+        <span>Lift maintenance visit</span><br>
+        <label><input type="radio" name="Lift maintenance visit" value="Yes" onclick="showDateField('liftDate')"> Yes</label>
+        <label><input type="radio" name="Lift maintenance visit" value="No" onclick="hideDateField('liftDate')"> No</label>
+    </div>
+    <div id="liftDate" class="date-field">
+        <label>Lift maintenance date:</label>
+        <input type="date" name="Lift maintenance date">
+    </div>
+    <div class="question-item">
+        <span>Lift Report received & filed</span><br>
+        <label><input type="radio" name="Lift Report received & filed" value="Yes"> Yes</label>
+        <label><input type="radio" name="Lift Report received & filed" value="No"> No</label>
+    </div>
+
+    <!-- Water Monitoring -->
+    <div class="question-item">
+        <span>Water Monitoring visit</span><br>
+        <label><input type="radio" name="Water Monitoring visit" value="Yes" onclick="showDateField('waterDate')"> Yes</label>
+        <label><input type="radio" name="Water Monitoring visit" value="No" onclick="hideDateField('waterDate')"> No</label>
+    </div>
+    <div id="waterDate" class="date-field">
+        <label>Water Monitoring date:</label>
+        <input type="date" name="Water Monitoring date">
+    </div>
+    <div class="question-item">
+        <span>Water Report received & filed</span><br>
+        <label><input type="radio" name="Water Report received & filed" value="Yes"> Yes</label>
+        <label><input type="radio" name="Water Report received & filed" value="No"> No</label>
+    </div>
+
+    <!-- Pest Control -->
+    <div class="question-item">
+        <span>Pest Control visit</span><br>
+        <label><input type="radio" name="Pest Control visit" value="Yes" onclick="showDateField('pestDate')"> Yes</label>
+        <label><input type="radio" name="Pest Control visit" value="No" onclick="hideDateField('pestDate')"> No</label>
+    </div>
+    <div id="pestDate" class="date-field">
+        <label>Pest Control date:</label>
+        <input type="date" name="Pest Control date">
+    </div>
+    <div class="question-item">
+        <span>Pest Report received & filed</span><br>
+        <label><input type="radio" name="Pest Report received & filed" value="Yes"> Yes</label>
+        <label><input type="radio" name="Pest Report received & filed" value="No"> No</label>
+    </div>
+
+    <!-- Sanitary Bins -->
+    <div class="question-item">
+        <span>Sanitary Bins visit</span><br>
+        <label><input type="radio" name="Sanitary Bins visit" value="Yes" onclick="showDateField('sanitaryDate')"> Yes</label>
+        <label><input type="radio" name="Sanitary Bins visit" value="No" onclick="hideDateField('sanitaryDate')"> No</label>
+    </div>
+    <div id="sanitaryDate" class="date-field">
+        <label>Sanitary Bins date:</label>
+        <input type="date" name="Sanitary Bins date">
+    </div>
+    <div class="question-item">
+        <span>Sanitary Report received & filed</span><br>
+        <label><input type="radio" name="Sanitary Report received & filed" value="Yes"> Yes</label>
+        <label><input type="radio" name="Sanitary Report received & filed" value="No"> No</label>
+    </div>
+</div>
+
             <input type="submit" value="Submit Checklist" class="btn-submit">
         </form>
 
@@ -247,6 +315,6 @@
 
     </div>
 
-    <script src="code.js"></script>
+    <script src="claudescript.js"></script>
 </body>
 </html>
