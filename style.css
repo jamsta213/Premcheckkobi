@@ -1,4 +1,6 @@
-/* Page & Form Wrapper */
+/* =========================
+   Page & Form Wrapper
+   ========================= */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f7fa;
@@ -21,7 +23,15 @@ body {
     top: 20px;
     width: 80px;
     height: 80px;
-    opacity: 0.2;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.question-set {
+    display: none;
 }
 
 .decor-left {
@@ -40,6 +50,8 @@ body {
 
 .header-img {
     width: 100%;
+    max-height: 100px;
+    object-fit: scale-down;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 15px;
@@ -79,9 +91,69 @@ form {
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.radios {
-    display: flex;
-    gap: 10px;
+/* =========================
+   Section Coloring
+   ========================= */
+
+/* Daily sections - Blue theme */
+#dailyTime {
+    border: 2px solid #a3c4ff;
+    background-color: #e6f0ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#morningQuestions, #afternoonQuestions {
+    border: 2px solid #a3c4ff;
+    background-color: #e6f0ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#morningQuestions .question-item,
+#afternoonQuestions .question-item {
+    background-color: #f0f8ff;
+}
+
+#morningQuestions .question-item:hover,
+#afternoonQuestions .question-item:hover {
+    background-color: #d9ebff;
+}
+
+/* Weekly sections - Green theme */
+#weeklyQuestions {
+    border: 2px solid #a3e6a3;
+    background-color: #e6ffe6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#weeklyQuestions .question-item {
+    background-color: #f0fff0;
+}
+
+#weeklyQuestions .question-item:hover {
+    background-color: #d9f5d9;
+}
+
+/* Monthly sections - Orange theme */
+#monthlyQuestions {
+    border: 2px solid #ffcc99;
+    background-color: #fff2e6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#monthlyQuestions .question-item {
+    background-color: #fff9f0;
+}
+
+#monthlyQuestions .question-item:hover {
+    background-color: #ffe6cc;
 }
 
 span {
@@ -95,30 +167,91 @@ input[type="radio"] {
     height: 16px;
 }
 
-/* Section coloring */
-#dailyTime, #morningQuestions, #afternoonQuestions {
-    border: 1px solid #a3c4ff;
-    background-color: #e6f0ff;
+
+
+/* =========================
+   Submit Button
+   ========================= */
+.btn-submit {
+    background: linear-gradient(135deg, #1e90ff, #3b82f6);
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    text-align: center;
 }
 
-#weeklyQuestions {
-    border: 1px solid #a3e6a3;
-    background-color: #e6ffe6;
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #3b82f6, #1e90ff);
 }
 
-#monthlyQuestions {
-    border: 1px solid #ffcc99;
-    background-color: #fff2e6;
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Hover effect for all sections */
-.daily .question-item:hover,
-.weekly .question-item:hover,
-.monthly .question-item:hover {
-    background-color: #cce7f0;  /* slightly darker highlight */
+/* =========================
+   Success Popup
+   ========================= */
+#success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-/* Mobile-friendly adjustments */
+#success-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-content {
+    background: #f4f6f9;
+    color: #1e3c72;
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 350px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.success-content h2 {
+    margin: 0 0 10px;
+}
+
+.success-content button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* =========================
+   Mobile-friendly adjustments
+   ========================= */
 @media (max-width: 600px) {
     input[type="radio"] {
         width: 24px;
@@ -126,32 +259,27 @@ input[type="radio"] {
     }
 
     .question-item {
-        flex-direction: column;      /* stack question and radios */
-        align-items: flex-start;     /* left-align everything */
+        flex-direction: column;
+        align-items: flex-start;
         padding: 15px;
-        margin: 15px 0;              /* slightly more spacing for touch */
-    }
-
-    .radios {
-        margin-top: 8px;             /* space above radio buttons */
-        gap: 20px;                   /* bigger gap for touch */
+        margin: 15px 0;
     }
 
     span {
-        margin-right: 0;             /* remove horizontal spacing */
-        font-size: 1.1em;            /* slightly bigger text */
+        margin-right: 0;
+        font-size: 1.1em;
     }
 
     form {
-        padding: 20px;               /* a bit more padding on mobile */
+        padding: 20px;
     }
 
     .form-wrapper {
-        width: 95%;                  /* nearly full width on mobile */
+        width: 95%;
     }
 
     .header-img {
-        max-width: 100%;             /* scale banner for small screens */
+        max-width: 100%;
     }
 
     .decor-left, .decor-right {
