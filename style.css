@@ -161,6 +161,48 @@ span {
     margin-right: 15px;
 }
 
+/* Additional Checks section - Purple theme */
+#additionalQuestions {
+    border: 2px solid #c4b5fd;
+    background-color: #f5f3ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#additionalQuestions .question-item {
+    background-color: #faf5ff;
+}
+
+#additionalQuestions .question-item:hover {
+    background-color: #ede9fe;
+}
+
+/* Date input fields */
+.date-field {
+    display: none;
+    margin: 12px 0;
+    padding: 10px 15px;
+    background-color: #e6f0ff;
+    border-left: 4px solid #1e90ff;
+    border-radius: 4px;
+}
+
+.date-field label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.date-field input[type="date"] {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 200px;
+}
+
 /* Default radio size (desktop) */
 input[type="radio"] {
     width: 16px;
